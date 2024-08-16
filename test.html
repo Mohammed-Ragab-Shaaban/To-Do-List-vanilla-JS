@@ -1,0 +1,70 @@
+<!Doctype html> 
+<html lang="en">
+<head>
+    <title>Ragab Test</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="description" content="Free Web tutorials">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="500">
+<!--Bootstrap Css-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="Bootstrap/bootstrapmin.css">
+    <link rel="stylesheet" href="testCSS.css">
+</head>
+<body>
+
+<div class="container-fluid bg-dark p-5 position-relative">
+    <div onclick="hideLabal()" class="labalDiv d-none position-absolute" style="background-color: rgba(0, 0, 0, 0.595); height: 100vh; width: 100%; top: 0; left: 0;">
+        <div onclick="event.stopPropagation()" class="formDiv bg-white w-50 m-auto p-5 rounded-4">
+            <!-- <form> -->
+                <label for="taskName">Task Name</label><br/>
+                <input type="text" id="taskName" name="taskName" placeholder="Enter Task Name" required/><br/><br/>
+                <label for="taskDate">Task Name</label><br/>
+                <input type="date" id="taskDate" name="taskDate" placeholder="Enter Task Date" required/><br/><br/>
+                <!-- <input type="submit" value="Done" onclick="addTaskToTasksToDo()"/> -->
+                <button onclick="addTaskToTasksToDo() ,hideLabal() ,event.stopPropagation()">Done</button>
+            <!-- </form> -->
+        </div>
+    </div>
+    <div class="container">
+        <div class="ToDo row">
+            <div class="leftDiv col-md-4 p-3">
+                <ul>
+                    <li id="changeH1All" onclick="changeH1All()">All</li>
+                    <li id="changeH1ToDo" onclick="changeH1ToDo()">To Do</li>
+                    <li id="changeH1Completed" onclick="changeH1Completed()">Completed</li>
+                </ul>
+                <i  onclick="HideAndShowDeleteIcon()" style="color: red; margin-left: 5px;" class="smallDeleteIcon fa-solid fa-circle-xmark"></i> 
+                <button onclick="addTask()" class="smallDeleteIcon plusButton">+</button>
+            </div>
+            <div class="rightDiv col-md-8 p-3">
+                <div class="headingRightDiv d-flex justify-content-between gap-1 align-items-center">
+                    <h3 id="changeHeading">Select status from left bar</h3>
+                    <button onclick="HideAndShowDeleteIcon()" class="addTaskBtn ms-auto rounded-pill">Delete Task <i style="color: red; margin-left: 5px;" class="fa-solid fa-circle-xmark"></i> </button>
+                    <button onclick="addTask()" class="addTaskBtn rounded-pill">Add Task +</button>
+                </div>
+                <div id="tasks">
+                        <div class="d-flex justify-content-between mb-2 border rounded-4 p-2 align-items-center">
+                            <div>
+                                <h5 class="m-0">Task 1</h5>
+                                <p class="m-0">date</p>
+                            </div>
+                            <div>
+                                <i class="fa-regular fa-circle"></i>
+                            </div>
+                        </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script src="Bootstrap/bootstrap.bundlemin.js"></script>
+<script src="testJS.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+
+
+.ToDo{
+    border: 2px solid rgb(179, 255, 0);
+    border-radius: 20px;
+    background-color: white;
+    transition: border .5s;
+}
+.ToDo:hover{
+    border: 2px solid green;
+ 
+}
+
+
+.rightDiv{
+    border-left: 1px solid #aaa;
+}
+.leftDiv ul{
+    list-style-type: none;
+    padding: 0px;
+
+}
+.leftDiv ul li{
+    padding: 10px;
+}
+
+.leftDiv ul li:hover ,ul li:visited {
+background-color: #F8F9FACC;
+color: #1576D6;
+border-radius: 10px;
+}
+
+.addTaskBtn{
+    background: no-repeat;
+    border: 1px solid #00B4D8;
+    padding: 5px 20px;
+}
+.addTaskBtn:hover{
+    box-shadow: 1px 1px 3px rgba(0, 180, 216, .5), -1px -1px 3px rgba(0, 180, 216, .5);
+}
+.plusButton{
+    color:#00B4D8 ;
+    background: no-repeat;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+    transition: all .5s;
+}
+.plusButton:hover{
+    border: 1px solid #00B4D8;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 180, 216, .5), -1px -1px 3px rgba(0, 180, 216, .5);
+
+}
+i{
+    color: #00B4D8;
+}
+.smallDeleteIcon{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 578px) {
+    .leftDiv ul{
+        display: flex;
+        font-size: 10px;
+        margin: 0px;
+    } 
+    .leftDiv{
+        display: flex;
+        align-items: baseline;
+        border-bottom: 1px solid #aaa;
+        padding: 0px !important;
+    }
+    .leftDiv button{
+        margin-left: auto;
+    }
+   
+    .rightDiv{
+        border: none;
+    }
+    .headingRightDiv{
+        display: none !important;
+    }
+
+    .formDiv{
+        padding: 10px !important;
+        width: 90% !important;
+    }
+    .formDiv input{
+        max-width: 100%;
+    }
+    .smallDeleteIcon{
+        display: block;
+       
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
